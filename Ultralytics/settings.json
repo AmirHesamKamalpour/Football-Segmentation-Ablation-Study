@@ -1,0 +1,21 @@
+{
+  "settings_version": "0.0.6",
+  "datasets_dir": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\data\\dataset",
+  "weights_dir": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\models\\pretrained",
+  "runs_dir": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\outputs\\yolo",
+  "uuid": "fc723d2014ade0c2219d488b4ccd6d54a76a0ec0582458d3d9562c759c5ddea9",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "hub": true,
+  "mlflow": true,
+  "neptune": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true,
+  "openvino_msg": true
+}

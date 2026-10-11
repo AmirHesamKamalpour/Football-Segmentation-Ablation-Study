@@ -1,0 +1,11 @@
+{
+  "dataset_dir": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\data\\dataset",
+  "pretrained_dir": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\models\\pretrained",
+  "training_run_dir": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\outputs\\yolo\\yolov8n_coco8_freeze10",
+  "best_model": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\outputs\\yolo\\yolov8n_coco8_freeze10\\weights\\best.pt",
+  "last_model": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\outputs\\yolo\\yolov8n_coco8_freeze10\\weights\\last.pt",
+  "results_plot": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\outputs\\yolo\\yolov8n_coco8_freeze10\\results.png",
+  "validation_image": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\data\\dataset\\coco8\\images\\val\\000000000036.jpg",
+  "prediction_dir": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\outputs\\yolo_predictions\\val_prediction",
+  "report_assets_dir": "C:\\Users\\amirh\\OneDrive\\Desktop\\Subjects\\RL\\RL_Codes_1\\homework_code2\\outputs\\report_assets"
+}

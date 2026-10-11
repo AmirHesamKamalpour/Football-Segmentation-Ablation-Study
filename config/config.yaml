@@ -1,0 +1,92 @@
+project:
+  name: football_segmentation
+  seed: 42
+  device: auto
+
+data:
+  root: data/dataset
+  dataset1:
+    name: dataset1
+    image_dir: data/dataset/dataset1/images
+    mask_dir: data/dataset/dataset1/masks
+    image_glob: "*.png"
+    mask_suffix: ""
+  dataset2:
+    name: dataset2
+    image_dir: data/dataset/dataset2/images
+    mask_dir: data/dataset/dataset2/images
+    image_glob: "*.jpg"
+    mask_suffix: "___fuse.png"
+  image_size: [256, 256]
+  val_ratio: 0.10
+  batch_size: 4
+  num_workers: 2
+  pin_memory: true
+  normalize:
+    enabled: false
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  ignore_index: 255
+
+classes:
+  num_classes: 9
+  names:
+    - background
+    - player
+    - goalkeeper
+    - referee
+    - ball
+    - goal_bar
+    - advertisement
+    - audience
+    - staff
+
+model:
+  in_channels: 3
+  num_classes: 9
+  base_channels: 64
+  up_mode: bilinear      # bilinear or transposed
+  use_skip_connections: true
+  use_batch_norm: false
+
+training:
+  epochs: 30
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  optimizer: adam
+  loss: cross_entropy    # cross_entropy or focal
+  focal_gamma: 2.0
+  focal_alpha: null
+  save_dir: models/saved_models
+  log_dir: outputs/logs
+
+experiments:
+  - name: skip_bilinear
+    up_mode: bilinear
+    use_skip_connections: true
+    use_batch_norm: false
+    loss: cross_entropy
+  - name: noskip_bilinear
+    up_mode: bilinear
+    use_skip_connections: false
+    use_batch_norm: false
+    loss: cross_entropy
+  - name: skip_transposed
+    up_mode: transposed
+    use_skip_connections: true
+    use_batch_norm: false
+    loss: cross_entropy
+  - name: noskip_transposed
+    up_mode: transposed
+    use_skip_connections: false
+    use_batch_norm: false
+    loss: cross_entropy
+
+yolo:
+  model: yolov8n.pt
+  data: coco8.yaml
+  epochs: 50
+  imgsz: 640
+  freeze: 10
+  project: outputs/yolo
+  name: yolov8n_coco8_freeze10
