@@ -1,0 +1,102 @@
+{
+  "evaluation": "best checkpoint selected by validation mIoU for each configuration",
+  "split": "180 training images, 20 validation images, one deterministic stratification by dataset, seed 42",
+  "results": [
+    {
+      "experiment": "skip_bilinear",
+      "mIoU": 0.434942,
+      "pixel_accuracy": 0.915817,
+      "per_class_iou": {
+        "background": 0.964945,
+        "player": 0.650736,
+        "goalkeeper": 0.251987,
+        "referee": 0.042288,
+        "ball": 0.0,
+        "goal_bar": 0.42097,
+        "advertisement": 0.761633,
+        "audience": 0.821924,
+        "staff": 0.0
+      }
+    },
+    {
+      "experiment": "noskip_bilinear",
+      "mIoU": 0.374607,
+      "pixel_accuracy": 0.8816,
+      "per_class_iou": {
+        "background": 0.918863,
+        "player": 0.54417,
+        "goalkeeper": 0.0,
+        "referee": 0.0,
+        "ball": 0.0,
+        "goal_bar": 0.402998,
+        "advertisement": 0.70715,
+        "audience": 0.798282,
+        "staff": 0.0
+      }
+    },
+    {
+      "experiment": "skip_transposed",
+      "mIoU": 0.40958,
+      "pixel_accuracy": 0.923441,
+      "per_class_iou": {
+        "background": 0.956781,
+        "player": 0.711229,
+        "goalkeeper": 0.072541,
+        "referee": 0.0,
+        "ball": 0.0,
+        "goal_bar": 0.303966,
+        "advertisement": 0.775493,
+        "audience": 0.866206,
+        "staff": 0.0
+      }
+    },
+    {
+      "experiment": "noskip_transposed",
+      "mIoU": 0.342426,
+      "pixel_accuracy": 0.895973,
+      "per_class_iou": {
+        "background": 0.94337,
+        "player": 0.596553,
+        "goalkeeper": 0.0,
+        "referee": 0.0,
+        "ball": 0.0,
+        "goal_bar": 0.0,
+        "advertisement": 0.726056,
+        "audience": 0.815857,
+        "staff": 0.0
+      }
+    },
+    {
+      "experiment": "best_with_batch_norm",
+      "mIoU": 0.598322,
+      "pixel_accuracy": 0.960488,
+      "per_class_iou": {
+        "background": 0.982088,
+        "player": 0.840319,
+        "goalkeeper": 0.408211,
+        "referee": 0.479846,
+        "ball": 0.165948,
+        "goal_bar": 0.697463,
+        "advertisement": 0.891554,
+        "audience": 0.919469,
+        "staff": 0.0
+      }
+    },
+    {
+      "experiment": "best_with_batch_norm_focal_loss",
+      "mIoU": 0.60847,
+      "pixel_accuracy": 0.954395,
+      "per_class_iou": {
+        "background": 0.979104,
+        "player": 0.835574,
+        "goalkeeper": 0.469783,
+        "referee": 0.342928,
+        "ball": 0.480336,
+        "goal_bar": 0.615269,
+        "advertisement": 0.868316,
+        "audience": 0.884922,
+        "staff": 0.0
+      }
+    }
+  ]
+}
